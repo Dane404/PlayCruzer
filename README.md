@@ -8,5 +8,5 @@
 ## Web-Application Part
 * Searching videogames (where can I watch it, average playtime)
 * Recommendations for video-games (based on played games)
-* View games which are soon to be released and when they are going to be released
-* Watchlist
+* Show games which are soon to be released and when they are going to be released
+* Make a Game-Watchlist(Play List)
