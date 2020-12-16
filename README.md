@@ -3,6 +3,7 @@
 * Giving a brief overview about the different online-game-shops
 * Compare the different online-game-shops
 * Compare user-friendliness
+* Compare communitys
 * Show the legal restrictions (when is it illegal to download games)
 
 ## Web-Application Part
