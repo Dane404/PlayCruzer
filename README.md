@@ -60,7 +60,7 @@ Because there are already so many watchlist for series and movies, we decided to
 ### General conditions and restrictions
 Due to the fact that this is the dynamic website we need to try minimise the budget. We also need to request a permissions to use a API. 
 This website will be compatible with every operating system which has the ability to use a web-browser. 
-The deadline of our project is the 10th July 2021, which is the end of the school-year.
+The deadline of our project is the 7th July 2021, which is the end of the school-year.
 
 
 ### Project goals and system concepts
