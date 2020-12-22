@@ -47,7 +47,7 @@ The chances are that the people will visit our website to inform themself about 
 ## Web-Application Part
 
 ### Introduction
-Because there are already so many watchlist for series and movies, we decided to create a Game-Watchlist(Playlist), because we didn´t find any of that kind. Our main goal is to maximise the user-friendlieness and the simpliness of the  website, because we don´t want the website to be to complicated.
+Because there are already so many watchlist for series and movies, we decided to create a Game-Watchlist(Playlist), because we didn´t find any of that kind. Our main goal is to maximise the user-friendlieness and the simpliness of the  website, because we don´t want the website to be to complicated.We think,that simple designed websites are much more userfriendlly.
 
 ### Start Position 
 #### What are we able to do?
