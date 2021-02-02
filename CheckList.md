@@ -7,4 +7,4 @@
 # Web Part
 * Teammembers should learn java script - not started
 * using an API(igdb or rawg) - not started
-* create an logo - in progress
+* create an logo - done
