@@ -1,7 +1,8 @@
 # Static Part
 * Gather all Informations about the different gameshops - done
 * Create a Comparisson table for the game shops - in progress
-* Implement Bootstrap - in progress
+* Implement Bootstrap - done
+* Change Colors of the Website - in progress
 * Check every information about grammar errors - in progress 
 * Add more information if needed - not started
 
