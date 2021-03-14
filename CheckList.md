@@ -1,7 +1,7 @@
 # Static Part
 * Gather all Informations about the different gameshops - done
 * Implement Bootstrap - done
-* Change Colors of the Website - in progress
+* add Pictures
 * Check every information about grammar errors - done
 
 # Web Part
