@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <title>Ubisoft Connect</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <p class="sidebar-heading">Play Cruzer</p>
+      <div class="list-group list-group-flush">
+        <a href="../StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
+        <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
+        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
+        <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
+        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white">Ubisoft Connect</a>
+        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white">Legal Restrictions</a>
+        <a href="WebApp.html" class="list-group-item list-group-item-action bg-primary text-white">Web App</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+       
+        <input type="checkbox" onclick="ChangeTheme()" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+        <div class="ball"></div>
+        </label>
+           
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Ubisoft-Connect</h1>
+       
+        <h2>Publisher: Ubisoft</h2> 
+        <h2>Description:</h2>
+        <p>Ubisoft-Connect previously U-Play is used exclusively by Ubisoft games althoug
+           they sell some other games too.</p>
+        <h2>Realese:</h2>
+        <p>
+          U-Play was first published for Pc in 2009 while the Ubisoft-Connect rebranding was in 2020.
+        </p>
+        <h2>History:</h2>
+        <p>U-Play started with the sucess of the Assassins Creed
+           series(in 2009) after that they introduced the Ubisoft
+            Club (in 2015) and in 2020 they retired the Ubisoft Club and 
+            the U-Play Store in favor for a new service Ubisoft-Connect</p>
+        <h2>Advantages:</h2>
+         <p>Ubisoft-Connect has Ubisoft Plus where you can pay some money 
+           per month to have acess to every game of Ubisoft as well as for 
+           upcoming beta tests.</p>
+        <h2>Disadvantages:</h2>
+        <p>They have a low capacity of games compared to other game shops
+           because almost every game they sell is from Ubisoft.</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+<!-- Theme Change Code -->
+<script>
+  if(localStorage.theme===undefined)
+  {
+    localStorage.theme="light";
+  }
+  if(localStorage.theme==="dark")
+  {
+    SetTheme("dark");
+  }
+  function ChangeTheme(){
+
+        
+  if (localStorage.theme==="light") { 
+      
+        localStorage.theme="dark";
+  }else{ 
+       localStorage.theme="light";
+
+  }      
+  SetTheme(localStorage.theme);
+      
+ }
+ function SetTheme (newTheme){
+  var theme = document.getElementsByTagName('link')[1];  
+  if(newTheme==="light")
+  {
+    theme.href='../whiteThemeStyle.css';
+  }
+  else if(newTheme==="dark")
+  {
+    theme.href="../darkThemeStyle.css";
+  }
+ }
+</script>
+</body>
+
+</html>

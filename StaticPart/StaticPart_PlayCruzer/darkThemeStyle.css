@@ -1,0 +1,125 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+#button{
+  border-radius:50px;
+  background-color: rgb(0, 1, 2);
+  color:white;
+  align-items: right;
+}
+body{
+  color:white;
+  background-color: rgb(0, 0, 0);
+}
+.checkbox {
+  
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+ 
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.logoPicture {
+  width:30px; 
+  height:30px;
+  margin-left:-10px;
+  margin-right: 10px;
+}
+.headerImage{
+  width:85%;
+  height:30%;
+  margin-top:2px;
+  margin-left:-10px;
+  margin-right: -10px;
+}
+table, th, td{
+  border: 2px solid rgb(255, 255, 255);
+  border-collapse:collapse;
+
+}
+ #wrapper {
+    
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+ }
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color: rgb(0, 0, 0);
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+  background-color: rgb(0, 0, 0);
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+  background-color: rgb(0, 0, 0);
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+  background-color: rgb(0, 0, 0);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+    background-color: rgb(0, 0, 0);
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+    background-color: rgb(0, 0, 0);
+  }
+}

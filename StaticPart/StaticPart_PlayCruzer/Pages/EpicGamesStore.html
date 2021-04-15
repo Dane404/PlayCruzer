@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Epic Games Store</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <p class="sidebar-heading">Play Cruzer</p>
+      <div class="list-group list-group-flush">
+        <a href="../StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
+        <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
+        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
+        <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
+        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white">Ubisoft Connect</a>
+        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white">Legal Restrictions</a>
+        <a href="WebApp.html" class="list-group-item list-group-item-action bg-primary text-white">Web App</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+       
+        <input type="checkbox" onclick="ChangeTheme()" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+        <div class="ball"></div>
+        </label>
+           
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Epic Games Store</h1>
+        
+        <h2>Publisher:  Epic Games</h2>
+        <h2>Description:</h2>
+       <p>Epic Gams is a game shop, which management is situated in Raleigh in South Carolina. 
+         It is one of the most used game shops on the entire world. Epic Games Store has over
+          61 million active monthly users.</p>
+        <h2>Content:</h2>
+        <p>Games for Windows, Linux, MacOS and ChromeOS</p>
+        <h2>Plattforms:</h2>
+        <p>PC</p>
+        <h2>Realese:</h2>
+        <p>Epic Games Store was founded on 6th. December 2018 for Windows.</p>
+        <h2>History and Evolution:</h2>
+        <p>A short time after the release of Fortnite, on the 6. December 2018 Epic Games Store was founded to counter steam on the global market.</p>
+        <h2>Advantages:</h2>
+        <p>They are having a lot of discounts. One time a month, they offer one game for free.
+           Developer receive 88% of the profit of the game, while they receive only 70% on steam.</p>
+        <h2>Disadvantages:</h2>
+        <p>Epic Games Store exists since 2018, so they are not having the capacity of game shops like steam.</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</script>
+<!-- Theme Change Code -->
+<script>
+  if(localStorage.theme===undefined)
+  {
+    localStorage.theme="light";
+  }
+  if(localStorage.theme==="dark")
+  {
+    SetTheme("dark");
+  }
+  function ChangeTheme(){
+
+        
+  if (localStorage.theme==="light") { 
+      
+        localStorage.theme="dark";
+  }else{ 
+       localStorage.theme="light";
+
+  }      
+  SetTheme(localStorage.theme);
+      
+ }
+ function SetTheme (newTheme){
+  var theme = document.getElementsByTagName('link')[1];  
+  if(newTheme==="light")
+  {
+    theme.href='../whiteThemeStyle.css';
+  }
+  else if(newTheme==="dark")
+  {
+    theme.href="../darkThemeStyle.css";
+  }
+ }
+</script>
+</body>
+
+</html>

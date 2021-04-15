@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>PlayCruzer</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+
+  <link href="whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
+  
+</head>
+
+<body>
+
+  <div class="bg-transparent d-flex " id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" border-right" id="sidebar-wrapper">
+      <p class="sidebar-heading">Play Cruzer</p>
+      <div class="list-group list-group-flush">
+        <a href="StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
+        <a href="Pages/Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
+        <a href="Pages/EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
+        <a href="Pages/Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
+        <a href="Pages/UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white">Ubisoft Connect</a>
+        <a href="Pages/MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="Pages/PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Pages/Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="Pages/LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white">Legal Restrictions</a>
+        <a href="Pages/WebApp.html" class="list-group-item list-group-item-action bg-primary text-white">Web App</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+       
+        <input type="checkbox" onclick="ChangeTheme()" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+        <div class="ball"></div>
+        </label>
+           
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Comparisson Table</h1>
+        <table>
+            <tr>
+                <th>Points</th>
+                <th>Steam</th>
+                <th>Epic Games Store</th>
+                <th>Origin</th>
+                <th>Ubisoft Connect</th>
+                <th>Microsoft Store</th>
+                <th>PlayStation Store</th>
+                <th>Nintendo E-Shop</th>
+            </tr>
+            <tr>
+              <td>Mods available</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+        </table>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+   <script>
+     $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <!-- Theme Change Code -->
+<script>
+  if(localStorage.theme===undefined)
+  {
+    localStorage.theme="light";
+  }
+  if(localStorage.theme==="dark")
+  {
+    SetTheme("dark");
+  }
+  function ChangeTheme(){
+
+        
+  if (localStorage.theme==="light") { 
+      
+        localStorage.theme="dark";
+  }else{ 
+       localStorage.theme="light";
+
+  }      
+  SetTheme(localStorage.theme);
+      
+ }
+ function SetTheme (newTheme){
+  var theme = document.getElementsByTagName('link')[1];  
+  if(newTheme==="light")
+  {
+    theme.href='whiteThemeStyle.css';
+  }
+  else if(newTheme==="dark")
+  {
+    theme.href="darkThemeStyle.css";
+  }
+ }
+</script>
+</body>
+
+</html>
