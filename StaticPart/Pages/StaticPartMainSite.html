@@ -9,7 +9,7 @@
   <title>PlayCruzer</title>
   
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
 
@@ -26,15 +26,15 @@
       <p class="sidebar-heading">Play Cruzer</p>
       <div class="list-group list-group-flush">
         <a href="StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
-        <a href="Pages/Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
-        <a href="Pages/EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
-        <a href="Pages/Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
-        <a href="Pages/UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white">Ubisoft Connect</a>
-        <a href="Pages/MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
-        <a href="Pages/PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/PS_STORE_LOGO.png">Playstation Store </a>
-        <a href="Pages/Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
-        <a href="Pages/LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white">Legal Restrictions</a>
-        <a href="Pages/WebApp.html" class="list-group-item list-group-item-action bg-primary text-white">Web App</a>
+        <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
+        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
+        <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
+        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white">Ubisoft Connect</a>
+        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white">Legal Restrictions</a>
+        <a href="WebApp.html" class="list-group-item list-group-item-action bg-primary text-white">Web App</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -75,7 +75,7 @@
               <td></td>
             </tr>
             <tr>
-              <td></td>
+              <td>On more than one plattform</td>
               <td></td>
               <td></td>
               <td></td>
@@ -144,8 +144,8 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Menu Toggle Script -->
    <script>
@@ -155,39 +155,8 @@
     });
     </script>
     <!-- Theme Change Code -->
-<script>
-  if(localStorage.theme===undefined)
-  {
-    localStorage.theme="light";
-  }
-  if(localStorage.theme==="dark")
-  {
-    SetTheme("dark");
-  }
-  function ChangeTheme(){
-
-        
-  if (localStorage.theme==="light") { 
-      
-        localStorage.theme="dark";
-  }else{ 
-       localStorage.theme="light";
-
-  }      
-  SetTheme(localStorage.theme);
-      
- }
- function SetTheme (newTheme){
-  var theme = document.getElementsByTagName('link')[1];  
-  if(newTheme==="light")
-  {
-    theme.href='whiteThemeStyle.css';
-  }
-  else if(newTheme==="dark")
-  {
-    theme.href="darkThemeStyle.css";
-  }
- }
+<script src="ChangeThemes.js">
+  
 </script>
 </body>
 

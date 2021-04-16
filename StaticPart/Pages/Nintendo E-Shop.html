@@ -12,7 +12,7 @@
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
+  <link href="whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
 
 
 </head>
@@ -25,7 +25,7 @@
     <div class=" border-right" id="sidebar-wrapper">
       <p class="sidebar-heading">Play Cruzer</p>
       <div class="list-group list-group-flush">
-        <a href="../StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
+        <a href="StaticPartMainSite.html" class="list-group-item list-group-item-action bg-primary text-white">Home</a>
         <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white">Steam</a>
         <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white">Epic Games Store</a>
         <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white">Origin</a>
@@ -102,39 +102,8 @@
     });
   </script>
 <!-- Theme Change Code -->
-<script>
-  if(localStorage.theme===undefined)
-  {
-    localStorage.theme="light";
-  }
-  if(localStorage.theme==="dark")
-  {
-    SetTheme("dark");
-  }
-  function ChangeTheme(){
-
-        
-  if (localStorage.theme==="light") { 
-      
-        localStorage.theme="dark";
-  }else{ 
-       localStorage.theme="light";
-
-  }      
-  SetTheme(localStorage.theme);
-      
- }
- function SetTheme (newTheme){
-  var theme = document.getElementsByTagName('link')[1];  
-  if(newTheme==="light")
-  {
-    theme.href='../whiteThemeStyle.css';
-  }
-  else if(newTheme==="dark")
-  {
-    theme.href="../darkThemeStyle.css";
-  }
- }
+<script src="ChangeThemes.js">
+  
 </script>
 </body>
 
