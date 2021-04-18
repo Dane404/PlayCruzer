@@ -53,8 +53,9 @@
 }
 
 .headerImage{
-  width:85%;
-  height:30%;
+  width:90%;
+  object-fit: fill;
+
   margin-top:2px;
   margin-left:-10px;
   margin-right: -10px;
