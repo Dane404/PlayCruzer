@@ -7,4 +7,4 @@
 # Web Part
 * Teammembers should learn java script - done
 * using an API(igdb or rawg) - not started
-* add a carousel
+* add a carousel - not started
