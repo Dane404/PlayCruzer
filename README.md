@@ -41,8 +41,7 @@ The chances are that the people will visit our website to inform themself about 
 *  More soon to follow
 #### Start and End of the Project
 * start: as soon as the description is approved
-* end: 12.02.2021
-* prototype: 5.02.2021
+* end: 30.04.2021
 
 ## Web-Application Part
 
