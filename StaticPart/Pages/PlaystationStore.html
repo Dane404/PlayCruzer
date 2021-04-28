@@ -5,8 +5,6 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>PlayStation Store</title>
 
@@ -14,7 +12,7 @@
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/simple-sidebar.css" rel="stylesheet">
+  <link href="whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
 
 </head>
 
@@ -23,19 +21,18 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img class ="logoPicture" src="../Pictures/Logo.png" >Play Cruzer</div>
+    <div class=" border-right" id="sidebar-wrapper">
+      <p class="sidebar-heading">Play Cruzer</p>
       <div class="list-group list-group-flush">
-        <a href="../StaticPartMainSite.html" class="list-group-item list-group-item-action bg-light">Home</a>
-        <a href="Steam.html" class="list-group-item list-group-item-action bg-light">Steam</a>
-        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-light">Epic Games Store</a>
-        <a href="Origin.html" class="list-group-item list-group-item-action bg-light">Origin</a>
-        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-light">Ubisoft Connect</a>
-        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-light">Microsoft Store</a>
-        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-light">Playstation Store</a>
-        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-light">Nintendo E-Shop</a>
-        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-light">Legal Restrictions</a>
-        <a href="WebApp.html" class="list-group-item list-group-item-action bg-light">Web App</a>
+        <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/STEAM_LOGO.png">Steam</a>
+        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/EPICGAMES_STORE_LOGO.png">Epic Games Store</a>
+        <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/ORIGIN_LOGO.png">Origin</a>
+        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/UBISOFT_STORE_LOGO.png">Ubisoft Connect</a>
+        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/WARNINGSIGN.png">Legal Restrictions</a>
+        <a href="WebApp.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/WEBAPP.png">Web App</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -43,19 +40,19 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-        
-        
-        </button>
-
-        
-      </nav>
-
-      <div class="container-fluid">
-        <h1 class="mt-4">PlayStation Store</h1>
+      <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
        
+        <input type="checkbox" onclick="ChangeTheme()" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+        <div class="ball"></div>
+        </label>
+           
+      </nav>
+      
+      
+      <div class="container-fluid">
+        <img class="headerImage" src="../Pictures/PS_STORE_HEADER_IMAGE.png">
+        <p><br></p>
         <h2>Publisher: Sony Interactive Entertainment</h2>
         <h2>Description:</h2>
         <p>The PlayStation Store is a gameshop where you can buy playstation games.
@@ -71,7 +68,7 @@
           <li>PlayStation Vita: 17.12.2011</li>
 
         </ul>
-        <h2>Realese: </h2>
+        <h2>Release: </h2>
         <p>11.11.2006 on the PlayStation 3</p>
         <h2>Advantages:</h2>
         <ul>
@@ -82,7 +79,7 @@
         <ul>
           <li>The PlayStation Store is very slow (sometimes you can’t even access the store or it takes too long to search for something)</li>
           <li>Sometimes when you buy a game, it doesn’t show that you bought it or it doesn’t even buy it</li>
-          <li>The prices are mostly the release prices (full price title = 60 €, some games which are very old, sometimes very old games cost less than the half of the price in the PlayStation Store)</li>
+          <li>The prices are mostly the release prices (full price title = 60 €, some games which are very old, sometimes very old games cost the same like when they have been released in the PlayStation Store)</li>
         </ul>
       </div>
     </div>
@@ -102,7 +99,10 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-
+<!-- Theme Change Code -->
+<script src="ChangeThemes.js">
+  
+</script>
 </body>
 
 </html>

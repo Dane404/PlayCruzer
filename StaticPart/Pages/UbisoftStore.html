@@ -5,8 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+
 
   <title>Ubisoft Connect</title>
 
@@ -14,7 +13,8 @@
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/simple-sidebar.css" rel="stylesheet">
+  <link href="whiteThemeStyle.css" rel="stylesheet" type="text/css" class="whiteTheme">
+
 
 </head>
 
@@ -23,19 +23,18 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img class ="logoPicture" src="../Pictures/Logo.png" >Play Cruzer</div>
+    <div class=" border-right" id="sidebar-wrapper">
+      <p class="sidebar-heading">Play Cruzer</p>
       <div class="list-group list-group-flush">
-        <a href="../StaticPartMainSite.html" class="list-group-item list-group-item-action bg-light">Home</a>
-        <a href="Steam.html" class="list-group-item list-group-item-action bg-light">Steam</a>
-        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-light">Epic Games Store</a>
-        <a href="Origin.html" class="list-group-item list-group-item-action bg-light">Origin</a>
-        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-light">Ubisoft Connect</a>
-        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-light">Microsoft Store</a>
-        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-light">Playstation Store</a>
-        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-light">Nintendo E-Shop</a>
-        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-light">Legal Restrictions</a>
-        <a href="WebApp.html" class="list-group-item list-group-item-action bg-light">Web App</a>
+        <a href="Steam.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/STEAM_LOGO.png">Steam</a>
+        <a href="EpicGamesStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/EPICGAMES_STORE_LOGO.png">Epic Games Store</a>
+        <a href="Origin.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/ORIGIN_LOGO.png">Origin</a>
+        <a href="UbisoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/UBISOFT_STORE_LOGO.png">Ubisoft Connect</a>
+        <a href="MicrosoftStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/MICROSOFT_STORE_LOGO.png">Microsoft Store</a>
+        <a href="PlaystationStore.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/PS_STORE_LOGO.png">Playstation Store </a>
+        <a href="Nintendo E-Shop.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/E_SHOP_LOGO.png">Nintendo E-Shop</a>
+        <a href="LegalRestrictions.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/WARNINGSIGN.png">Legal Restrictions</a>
+        <a href="WebApp.html" class="list-group-item list-group-item-action bg-primary text-white"><img class="logoPicture" src="../Pictures/WEBAPP.png">Web App</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -43,17 +42,17 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-        
-        
-        </button>
-
-        
+      <nav class="navbar navbar-expand-lg navbar-light  border-bottom">
+       
+        <input type="checkbox" onclick="ChangeTheme()" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+        <div class="ball"></div>
+        </label>
+           
       </nav>
 
       <div class="container-fluid">
+        <img class ="headerImage"src="../Pictures/UBISOFT_HEADER.png">
         <h1 class="mt-4">Ubisoft-Connect</h1>
        
         <h2>Publisher: Ubisoft</h2> 
@@ -94,7 +93,10 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-
+<!-- Theme Change Code -->
+<script src="ChangeThemes.js">
+  
+</script>
 </body>
 
 </html>
