@@ -1,14 +1,39 @@
+const gamesList = document.getElementById('gamesList');
+const searchBar = document.getElementById('searchBar');
+var lastRequest = "";
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    if(searchString!=""&&lastRequest!=e)
+    {
+        lastRequest=e;
+        request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&search="+e,true);
+        request.onload= function(){
 
-/*
+            var response =JSON.parse(request.responseText);
 
-const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games/4200?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&search=",true);
+            
+            displayCharacters(foundGames);
+        }
+        request.send();
+        
+     }
+     
 
-request.onload=function(){
-     console.log("Status-Code: "+request.status);
-     var response =JSON.parse(request.responseText);
-     console.log(response.description);
-     localStorage.game = response;
-}
-request.send();
-*/
+    
+
+    
+});
+
+
+const displayCharacters = (games) => {
+    const htmlString =games
+        .map(games => {
+            return `
+            <li class="games">
+                <h2>${games.name}</h2>
+            </li>`
+        ;
+        });
+    gamesList.innerHTML = htmlString;
+};
+

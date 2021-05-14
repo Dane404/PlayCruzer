@@ -21,7 +21,17 @@
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Play Cruzer</a>
-                 <input id="searchbar" type="text" name="search">
+                <div id="searchWrapper">
+                    <input
+                        type="text"
+                        name="searchbar"
+                        id="searchBar"
+                        placeholder="search for a game"
+                    
+                    />
+                    
+                </div>
+                <ul id="gamesList"></ul>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 
                     <i class="fas fa-bars"></i>
@@ -102,54 +112,7 @@
             </div>
         </section>
         <p></p>
-        <!--  random game section-->
-        <section class="page-section game" id="random">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Random Games</h2>
-                <p><br></p>
-                <div class="row justify-content-center">
-                <div class="row justify-content-center">
-                    
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                            <img class="img-fluid" id="random1"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                            <img class="img-fluid" id="random2"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
 
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                            <img class="img-fluid" id="random3"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                            <img class="img-fluid" id="random4"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                            
-                            <img class="img-fluid" id="random5"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="game-item mx-auto" >
-                           
-                            <img class="img-fluid" id="random6"src="assets/img/Logo.png" alt="..." />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
@@ -221,8 +184,7 @@
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="searchbar.js"></script>
+        <!----><script src="js/scripts.js"></script>
         <script src="showGamesOnMainSite.js"></script>
     </body>
 </html>

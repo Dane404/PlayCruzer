@@ -1,25 +1,21 @@
-const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8",true);
-request.onload= function(){
-     var response =JSON.parse(request.responseText);
-     for(let i = 0;i<=6;i++)
-     {
-        var changeElement = document.getElementById("recommendations"+(i+1));
-        changeElement.src = response.results[i].background_image;
-        var changeTitle = document.getElementById("gameTitle"+(i+1));
-        changeTitle.innerText=  response.results[i].name;
-     }
-
-     for(let i = 0;i<=6;i++)
-     {
-         
-        var changeElement = document.getElementById("random"+(i+1));
-        
-        changeElement.src = response.results[i].background_image;
-        var changeTitle = document.getElementById("RandGameTitle"+(i+1));
-        changeTitle.innerText=  response.results[i].name;
-     }
-    
-     
+async function PostData(){
+     const response= await fetch("https://api.igdb.com/v4/games",{
+          method:"POST",
+          mode:"cors",
+          cache:"no-cache",
+          "Client-ID": "awg3jkqqq1yxfbok7ggh0zrg03tprr",
+          Authorization: "bearer ecllk4ol7gibj6p60559zqs99cnoai",
+          credentials:"same-origin",
+          headers:{
+               "Content-Type": "application/json"
+          },
+          body:"fields name;"
+     });
+     return response.json();
 }
-request.send();
+
+
+PostData().
+then(data=>{
+     console.log(data);
+})
