@@ -6,8 +6,14 @@ request.onload= function(){
      {
         var changeElement = document.getElementById("recommendations"+(i+1));
         changeElement.src = response.results[i].background_image;
+        changeElement.alt=response.results[i].id;
         var changeTitle = document.getElementById("gameTitle"+(i+1));
         changeTitle.innerText=  response.results[i].name;
      }
 }
 request.send();
+
+
+function On_Click(){
+   localStorage.gameId=this.alt;
+}
