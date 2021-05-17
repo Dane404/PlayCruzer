@@ -40,7 +40,6 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#recommendations">Recommendations</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#random">Random Games</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                        
                     </ul>
@@ -70,7 +69,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle1"></p>
-                            <a href="gamePage.html"onclick=On_Click() alt="..."> <img class="img-fluid" id="recommendations1"src="assets/img/Logo.png"/></a>
+                            <a href="gamePage.html"onclick=On_Click(event) alt="..."> <img class="img-fluid" id="recommendations1"src="assets/img/Logo.png"/></a>
                            
                         </div>
                     </div>
@@ -78,7 +77,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle2"></p>
-                            <a href="gamePage.html" onclick=On_Click() alt="..."><img class="img-fluid" id="recommendations2"src="assets/img/Logo.png"  /></a>
+                            <a href="gamePage.html" onclick=On_Click(event) alt="..."><img class="img-fluid" id="recommendations2"src="assets/img/Logo.png"  /></a>
                             
                         </div>
                     </div>
@@ -86,7 +85,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle3"></p>
-                            <a href="gamePage.html"  alt="..."><img class="img-fluid" id="recommendations3"src="assets/img/Logo.png"  /></a>
+                            <a href="gamePage.html" onclick=On_Click(event) alt="..."><img class="img-fluid" id="recommendations3"src="assets/img/Logo.png"  /></a>
                             
                         </div>
                     </div>
@@ -94,7 +93,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle4"></p>
-                            <a href="gamePage.html" alt="..."><img  class="img-fluid" id="recommendations4"src="assets/img/Logo.png"   /></a>
+                            <a href="gamePage.html" onclick=On_Click(event) alt="..."><img  class="img-fluid" id="recommendations4"src="assets/img/Logo.png"   /></a>
                             
                         </div>
                     </div>
@@ -102,7 +101,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle5"></p>
-                            <a href="gamePage.html"  alt="..."><img class="img-fluid" id="recommendations5"src="assets/img/Logo.png"   /></a>
+                            <a href="gamePage.html"  onclick=On_Click(event) alt="..."><img class="img-fluid" id="recommendations5"src="assets/img/Logo.png"   /></a>
                             
                         </div>
                     </div>
@@ -110,7 +109,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="game-item mx-auto" >
                             <p id="gameTitle6"></p>
-                            <a href="gamePage.html" alt="..."><img class="img-fluid" id="recommendations6"src="assets/img/Logo.png" /></a>
+                            <a href="gamePage.html"onclick=On_Click(event) alt="..."><img class="img-fluid" id="recommendations6"src="assets/img/Logo.png" /></a>
                             
                         </div>
                     </div>
@@ -192,5 +191,6 @@
         <!-- Core theme JS-->
         <!----><script src="js/scripts.js"></script>
         <script src="showGamesOnMainSite.js"></script>
+        <script src="on_click.js"></script>
     </body>
 </html>

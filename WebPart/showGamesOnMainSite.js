@@ -14,9 +14,3 @@ request.onload= function(){
 }
 request.send();
 
-async function On_Click(){
-   localStorage.gameId=await getAlt();
-}
-async function getAlt(event){
-   return event.target.alt;
-}
