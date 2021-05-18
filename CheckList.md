@@ -13,4 +13,3 @@
 * create a dynamic search bar - in progress
 * create a game page where you can read details of a game - done
 * clean up the code - not started
-* 
