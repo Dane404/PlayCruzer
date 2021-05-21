@@ -1,3 +1,4 @@
 async function On_Click(event){
-    localStorage.gameId=event.target.alt;
+    
+    window.location.replace("./gamePage.html?id="+event.target.alt);
  }
