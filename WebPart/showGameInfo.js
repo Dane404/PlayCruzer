@@ -1,9 +1,9 @@
-GetIdFromURL(); 
+let searchedId= GetIdFromURL(); 
 
 const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games/"+localStorage.gameId+"?key=d6cc5ff8a62b4b5ea8443d792d63ccf8",true);
-request.onload= function(){
-
+request.open("GET","https://api.rawg.io/api/games/"+searchedId+"?key=d6cc5ff8a62b4b5ea8443d792d63ccf8",true);
+request.onload= function()
+{
      var response =JSON.parse(request.responseText);
      document.getElementById("gameImage").src = response.background_image;
      var changeTitle = document.getElementById("gameTitle");
@@ -19,5 +19,6 @@ request.send();
 function GetIdFromURL()
 {
      const query = window.location.search;
-     console.log(query);
+     const urlParams = new URLSearchParams(query);
+     return urlParams.get("id");
 }
