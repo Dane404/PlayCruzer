@@ -54,18 +54,16 @@ Because there are already so many watchlist for series and movies, we decided to
 #### What do we want to do?
 * We want to learn to program in java script and learn how to use an API, because if we learn this, we can develope a solid and clear website.
 #### What are the deficits of the teammembers?
-* The biggest deficit of the teammembers is disorganisation and the lack of knowledge in Java-script.
+* The biggest problem with teammembers is the amount of work, that is split between all of them, because should any teammember leave the whole workplan is falling apart.
 
 ### General conditions and restrictions
 Due to the fact that this is the dynamic website we need to try minimise the budget. We also need to request a permissions to use a API. 
 This website will be compatible with every operating system which has the ability to use a web-browser. 
-The deadline of our project is the 7th July 2021, which is the end of the school-year.
+The deadline of our project is the 20. June 2021, because the 22.6.2021 is the date of the WebApp presentation.
 
 
 ### Project goals and system concepts
-Our main goal is to develop a website which has a account system and an list funktion, which records the played games and notes the games which are planned to play, of the user. We will try to keep the budget as low as possible and the quality and user-friendlieness as high as possible.
-The reason we are making this website is, because we thought that the ideo of an game-watchlist is pretty nice and would help many people.
-Our main target group are gamers which want to record their played games or to plan to play certain games.
+Our main goal is to develop a website which has a search engninge for games.
 
 ### Chances and risks
 The chances are that the users like the website and use our website regulary because of that. The risk are that people won´t like the design and the funktions and don´t use the website because of that. 
@@ -75,14 +73,13 @@ The chances are that the users like the website and use our website regulary bec
 #### Team
 * Project-Leader: Danijel Pejic
 * Design: Christoph Moosbrugger
-* Developer: Danijel Pejic, Christoph Moosbrugger, Gangl Florian
+* Developer: Danijel Pejic, Christoph Moosbrugger
 
 #### Project-Milesstones:
-*  19.12.2020 - Wireframe Diagram completed
 *  21.12.2020 - Approved Project-Description
 *  More soon to follow
 
 #### Start and End of the Project
 * start: after the end of the school-year(12.02.2021)
-* end: 7.07.2021(end of the school-year)
+* end: 20.6..2021(end of the school-year)
 * prototype: 25.06.2021
