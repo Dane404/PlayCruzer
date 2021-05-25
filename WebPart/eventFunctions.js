@@ -1,5 +1,6 @@
 async function On_Click(event)
 {
+    console.log(event.target);
     window.location.replace("./gamePage.html?id="+event.target.alt);
  }
 function On_Submit(event)
@@ -12,6 +13,13 @@ function On_Submit(event)
         window.location.replace("./searchSite.html?search="+searchString+"&page=1");
     }
     
+}
+function On_Page_ButtonClick(event)
+{
+    console.log(event.target);
+    let newQuery = new URLSearchParams(window.location.search);
+    newQuery.set("page",event.target.innerText);
+    window.location.replace("./searchSite.html?"+newQuery);
 }
 function On_ButtonClick()
 {
