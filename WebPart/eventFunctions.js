@@ -8,9 +8,13 @@ function On_Submit(event)
     if(event.keyCode==13)
     {
         let searchbar = document.getElementById("searchBar");
-        let searchString = slugify(searchbar.value);
+        if(searchbar.value!="")
+        {
+            let searchString = slugify(searchbar.value);
     
-        window.location.replace("./searchSite.html?search="+searchString+"&page=1");
+            window.location.replace("./searchSite.html?search="+searchString+"&page=1");
+        }
+
     }
     
 }

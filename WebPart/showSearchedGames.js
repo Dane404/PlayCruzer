@@ -41,12 +41,14 @@ request.onload= function()
         //page nav buttons
         let pages=  Math.ceil(response.count/40);
         let pageNav = document.getElementById("pageNav");
-        for(let i = 1;i<=pages;i++)
+        let firstButtonCreated= false;
+        for(let i = GetPage()+1;i<=pages;i++)
         {
-            let button = document.createElement("button");// create button
-            button.setAttribute("onclick","On_Page_ButtonClick(event)");
-            button.innerText= i;
-            pageNav.appendChild(button);
+                let button = document.createElement("button");// create button
+                button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                button.innerText= i;
+                pageNav.appendChild(button);
+            
         }
      }
      else
@@ -56,3 +58,7 @@ request.onload= function()
     
 }
 request.send();
+function GetPage(){
+    let urlParams =new URLSearchParams();
+    return urlParams.get("page");
+}
