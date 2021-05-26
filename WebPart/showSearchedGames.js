@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(query);
 let searchValue = urlParams.get("search");
 let searchPage = urlParams.get("page");
 const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&page_size=40&search="+searchValue+"&page="+searchPage,true);
+request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&search_precise=true&page_size=40&search="+searchValue+"&page="+searchPage,true);
 request.onload= function()
 {
      var response =JSON.parse(request.responseText);
@@ -42,23 +42,61 @@ request.onload= function()
         let pages=  Math.ceil(response.count/40);
         let pageNav = document.getElementById("pageNav");
         let firstButtonCreated= false;
-        for(let i = GetPage()+1;i<=pages;i++)
+        let shouldContinue=true;
+        let pageLength=pages;
+        if(searchPage+10<=pages)
         {
-                let button = document.createElement("button");// create button
-                button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                button.innerText= i;
-                pageNav.appendChild(button);
+            pageLength=searchPage+10;
+        }
+        let count = 0;
+        for(let i =searchPage;i<=pageLength;i++)
+        {
+            if(count<10)
+            {
+                count++;
+                if(searchPage>=2&& firstButtonCreated===false)
+                {
+                    let button = document.createElement("button");// create button
+                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                    button.innerText=1;
+                    pageNav.appendChild(button);
+                    let dotButton = document.createElement("button");// create button
+                    dotButton.innerText="...";
+                    pageNav.appendChild(dotButton);
+                    firstButtonCreated=true;
+                }
+                if(i<=pageLength&&i<=pages)
+                {
+                    let button = document.createElement("button");// create button
+                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                    button.innerText= i;
+                    if(i===searchPage)
+                    {
+                        button.style.background="yellow";
+                    }
+                    pageNav.appendChild(button);
+                }   
+                if(count ===10&&i!=pages){
+                    let dotButton = document.createElement("button");// create button
+                    dotButton.innerText="...";
+                    pageNav.appendChild(dotButton);
+                    let button = document.createElement("button");// create button
+                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                    button.innerText=pages;
+                    pageNav.appendChild(button);
+                   
+                }
+
+                
+            }
+            else{
+                i = pageLength;
+            }
+            
+           
             
         }
      }
-     else
-     {
 
-     }
-    
 }
 request.send();
-function GetPage(){
-    let urlParams =new URLSearchParams();
-    return urlParams.get("page");
-}
