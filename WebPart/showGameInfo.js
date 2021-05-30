@@ -8,12 +8,64 @@ screenShotRequest.onload=function(){
      {
           var response =JSON.parse(request.responseText);
           var screenShotResponse =JSON.parse(screenShotRequest.responseText);
-          let slideShow = document.getElementById("slideShow");
-          for(let i=0;i<screenShotResponse.results.length;i++)
+          if(screenShotResponse.results.length!=0||response.background_image!=null)
           {
-               let image = document.createElement("img");
-               image.src=screenShotResponse.results[i].image;
-               slideShow.appendChild(image);
+               if(screenShotResponse.results.length>1)
+               {
+                    let carouselInner = document.getElementById("carouselInner");
+                    for(let i=0;i<screenShotResponse.results.length;i++)
+                    {
+                         
+                         let carouselItem = document.createElement("div");
+                         if(i===0)
+                         {
+                              carouselItem.setAttribute("class","carousel-item active");
+                         }
+                         else{
+                              carouselItem.setAttribute("class","carousel-item");
+                         }
+                         
+                         let image = document.createElement("img");
+                         image.setAttribute("class","d-block w-100");
+                         image.src=screenShotResponse.results[i].image;
+                         carouselItem.appendChild(image);
+                         carouselInner.appendChild(carouselItem);
+                    }
+                    let currentButton = "prev";
+                    for(let i = 0;i<=1;i++)
+                    {
+                         let button = document.createElement("a");
+                         button.setAttribute("class","carousel-control-"+currentButton);
+                         button.setAttribute("role","button");
+                         button.setAttribute("data-slide",currentButton);
+                         button.href = "#myCarousel";
+                         let span1 = document.createElement("span");
+                         span1.setAttribute("class","carousel-control-"+currentButton+"-icon");
+                         span1.setAttribute("aria-hidden","true");
+                         let span2 = document.createElement("span");
+                         span2.setAttribute("class","sr-only");
+                         span2.innerText=currentButton;
+                         button.appendChild(span1);
+                         button.appendChild(span2);
+                         currentButton="next";
+                         document.getElementById("myCarousel").appendChild(button);
+                    }
+               }
+               else if(screenShotResponse.results.length===1){
+                    let image = document.createElement("image");
+                    image.src= screenShotResponse.results[0].image;
+                    image.setAttribute("class","d-block w-100");
+                    document.getElementById("carouselInner").appendChild(image);
+               }
+               else if(response.background_image!=null){
+                    let image = document.createElement("image");
+                    image.src= response.background_image;
+                    image.setAttribute("class","d-block w-100");
+                    document.getElementById("carouselInner").appendChild(image);
+               }
+               
+
+
           }
           var changeTitle = document.getElementById("gameTitle");
           changeTitle.innerText+=  " "+response.name;
