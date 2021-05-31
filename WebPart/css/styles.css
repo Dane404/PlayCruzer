@@ -11,7 +11,73 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
  
- .swipe{
+
+
+.carouselRated {
+  height: 250px;
+  width: 100%;
+  position:relative;
+}
+.carouselRated .switchLeft,
+.carouselRated .switchRight {
+  color: white;
+  font-weight: bold;
+  height: 120%;
+  width: 45px;
+  line-height: 250px;
+  font-size: 25px;
+  text-align: center;
+  background-color: lightgreen;
+  font-family: sans-serif;
+  top: 0;
+  z-index: 3;
+}
+
+.carouselRated .switchLeft {
+  position: absolute;
+
+  left: -50px;
+}
+
+.carouselRated .switchRight {
+  position: absolute;
+
+  right: -50px;
+}
+
+.carouselbox {
+  height: 250px;
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  padding-bottom: 10px !important;
+  display: flex;
+  align-items: center;
+}
+
+.carouselbox img {
+  min-width: 200px;
+  max-width: 200px;
+  height: 200px;
+  background-size:contain;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  z-index: 5;
+
+  /* margin: 15px; */
+}
+
+.carouselbox img:hover {
+  transform: scale(1.4);
+  z-index: 5;
+}
+  
+
+
+
+.swipe{
   overflow:auto;
   white-space:nowrap;
 }
