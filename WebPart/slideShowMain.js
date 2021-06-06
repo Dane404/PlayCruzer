@@ -17,7 +17,7 @@ function sliderScrollLeft() {
     scrollAmount = 0;
   }
 
-  console.log("Scroll Amount: ", scrollAmount);
+
 }
 
 function sliderScrollRight() {
@@ -38,18 +38,15 @@ function ShowGames(){
         for(let i = 0;i<response.results.length;i++)
         {
             let link = document.createElement("a");
-           
             let carouselInner = document.getElementById("carouselInnerRated");
             let image = document.createElement("img");
             image.setAttribute("onclick","On_Click(event)");
             image.alt = response.results[i].id;
             image.setAttribute("class","img-"+(i+1)+" slider-img");
             image.src=response.results[i].background_image;
-
             carouselInner.appendChild(image);
         }
-
-        scrollPerClick = document.querySelector(".img-1").clientWidth + 60;
+        scrollPerClick = document.querySelector(".img-1").clientWidth + 850;
     }
     request.send();
 }

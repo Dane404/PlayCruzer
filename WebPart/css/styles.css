@@ -22,27 +22,29 @@
 .carouselRated .switchRight {
   color: white;
   font-weight: bold;
-  height: 120%;
-  width: 45px;
+  height: 100%;
+  width: 40px;
   line-height: 250px;
-  font-size: 25px;
+  font-size: 50px;
   text-align: center;
-  background-color: lightgreen;
+  background-color:transparent;
   font-family: sans-serif;
   top: 0;
+
+  color: black;
   z-index: 3;
 }
 
 .carouselRated .switchLeft {
   position: absolute;
 
-  left: -50px;
+  left: -80px;
 }
 
 .carouselRated .switchRight {
   position: absolute;
 
-  right: -50px;
+  right: -80px;
 }
 
 .carouselbox {
