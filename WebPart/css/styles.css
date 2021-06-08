@@ -6178,6 +6178,11 @@ a.close.disabled {
   vertical-align: text-top !important;
 }
 
+.bg-gamepage-primary {
+  background-color: #90ffe9 !important;
+}
+
+
 .bg-primary {
   background-color: #1abc9c !important;
 }
