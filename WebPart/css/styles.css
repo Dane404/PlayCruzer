@@ -23,7 +23,7 @@
   color: white;
   font-weight: bold;
   height: 100%;
-  width: 40px;
+  width: 40%;
   line-height: 250px;
   font-size: 50px;
   text-align: center;
@@ -36,15 +36,15 @@
 }
 
 .carouselRated .switchLeft {
-  position: absolute;
+  position:absolute;
 
-  left: -80px;
+  left:-250px;
 }
 
 .carouselRated .switchRight {
   position: absolute;
 
-  right: -80px;
+  right: -250px;
 }
 
 .carouselbox {
