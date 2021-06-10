@@ -21,7 +21,7 @@ request.onload= function()
 
             let cardDiv = document.createElement("div");
             cardDiv.setAttribute("class","card");
-            cardDiv.setAttribute("style","18rem");
+           
 
             let cardBody = document.createElement("div");
             cardBody.setAttribute("class","card-img-top");
@@ -34,15 +34,17 @@ request.onload= function()
 
             let createdLink = document.createElement("a"); // link to get on the game site
             createdLink.setAttribute("onclick","On_Click(event)");
+            createdLink.setAttribute("text-align","center");
+            let centerImageDiv = document.createElement("div");
 
             let createdImage = document.createElement("img");//the image to be shown
             createdImage.setAttribute("class","card-img-bottom");
-            createdImage.setAttribute("background-size","auto");
             
   
             createdImage.alt = response.results[i].id;
-            createdImage.style.width="500px";
+            createdImage.style.width="200px";
             createdImage.style.height="100px";
+            
             if(response.results[i].background_image===null)
             {
                 createdImage.src = "assets/img/Logo.png";
@@ -50,6 +52,7 @@ request.onload= function()
             else{
                 createdImage.src = response.results[i].background_image;
             }
+            centerImageDiv.appendChild(createdImage);
             cardBody.appendChild(gameTitle);
            
             cardBody.appendChild(createdImage);
