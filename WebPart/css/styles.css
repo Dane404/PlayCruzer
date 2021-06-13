@@ -4519,7 +4519,7 @@ input[type=button].btn-block {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-  margin-left: 2.5em;
+  text-align: center;
   object-fit:scale-down;
 }
 
