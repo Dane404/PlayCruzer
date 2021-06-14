@@ -19,11 +19,11 @@ function On_PrevOrNext_Button_Click(event)
 {
     let urlParams = new URLSearchParams(window.location.search);
     let searchString = slugify(urlParams.get("search"));
-    if(event.target.innerText==="prev")
+    if(event.target.innerText==="<")
     {
         window.location.replace("./searchSite.html?search="+searchString+"&page="+(parseInt(urlParams.get("page"))-1));
     }
-    if(event.target.innerText==="next")
+    if(event.target.innerText===">")
     {
         window.location.replace("./searchSite.html?search="+searchString+"&page="+(parseInt(urlParams.get("page"))+1));
     }

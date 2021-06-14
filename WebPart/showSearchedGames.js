@@ -86,18 +86,22 @@ request.onload= function()
             {
                 let prevButton = document.createElement("button");
                 prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
-                prevButton.innerText="prev";
+                prevButton.innerText="<";
                 pageNav.appendChild(prevButton);
             }
             if(count==0&&parseInt(searchPage)===pages)
             {
-                let button = document.createElement("button");// create button
+                if(i>1)
+                {
+                    let button = document.createElement("button");// create button
                     button.setAttribute("onclick","On_Page_ButtonClick(event)");
                     button.innerText=1;
                     pageNav.appendChild(button);
                     let dotButton = document.createElement("button");// create button
                     dotButton.innerText="...";
                     pageNav.appendChild(dotButton);
+                }
+               
                     let currbutton = document.createElement("button");// create button
                     currbutton.setAttribute("onclick","On_Page_ButtonClick(event)");
                     currbutton.innerText= pages;
@@ -132,7 +136,7 @@ request.onload= function()
                     }
                     pageNav.appendChild(button);
                 }   
-                if(count ===countBorder&&i!==pages){
+                if(count ===countBorder&&i!==pages&&i>1){
                     let dotButton = document.createElement("button");// create button
                     dotButton.innerText="...";
                     pageNav.appendChild(dotButton);
@@ -142,7 +146,7 @@ request.onload= function()
                     pageNav.appendChild(button);
                     let nextButton = document.createElement("button");
                     nextButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
-                    nextButton.innerText="next";
+                    nextButton.innerText=">";
                     pageNav.appendChild(nextButton);
                 }
             }
