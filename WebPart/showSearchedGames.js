@@ -21,7 +21,7 @@ request.onload= function()
 
             let cardDiv = document.createElement("div");
             cardDiv.setAttribute("class","card");
-            cardDiv.setAttribute("style","18rem");
+           
 
             let cardBody = document.createElement("div");
             cardBody.setAttribute("class","card-img-top");
@@ -34,15 +34,16 @@ request.onload= function()
 
             let createdLink = document.createElement("a"); // link to get on the game site
             createdLink.setAttribute("onclick","On_Click(event)");
+            let centerImageDiv = document.createElement("div");
 
             let createdImage = document.createElement("img");//the image to be shown
             createdImage.setAttribute("class","card-img-bottom");
-            createdImage.setAttribute("background-size","auto");
             
   
             createdImage.alt = response.results[i].id;
-            createdImage.style.width="500px";
+            createdImage.style.width="200px";
             createdImage.style.height="100px";
+            
             if(response.results[i].background_image===null)
             {
                 createdImage.src = "assets/img/Logo.png";
@@ -50,6 +51,7 @@ request.onload= function()
             else{
                 createdImage.src = response.results[i].background_image;
             }
+            centerImageDiv.appendChild(createdImage);
             cardBody.appendChild(gameTitle);
            
             cardBody.appendChild(createdImage);
@@ -62,6 +64,7 @@ request.onload= function()
         }
 
         //page nav buttons
+        let countBorder = 10;
         let pages=  Math.ceil(response.count/40);
         let pageNav = document.getElementById("pageNav");
         let firstButtonCreated= false;
@@ -72,12 +75,23 @@ request.onload= function()
             pageLength=searchPage+10;
         }
         let count = 0;
+        console.log(pages);
+        if((parseInt(searchPage)+countBorder)>=pages)
+        {
+            countBorder=10-((parseInt(searchPage)+10-pages));
+        }
         for(let i =searchPage;i<=pageLength;i++)
         {
-            if(count<10)
+            if(count==0&&searchPage!=1)
             {
-                count++;
-                if(searchPage>=2&& firstButtonCreated===false)
+                let prevButton = document.createElement("button");
+                prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
+                prevButton.innerText="<";
+                pageNav.appendChild(prevButton);
+            }
+            if(count==0&&parseInt(searchPage)===pages)
+            {
+                if(i>1)
                 {
                     let button = document.createElement("button");// create button
                     button.setAttribute("onclick","On_Page_ButtonClick(event)");
@@ -86,6 +100,32 @@ request.onload= function()
                     let dotButton = document.createElement("button");// create button
                     dotButton.innerText="...";
                     pageNav.appendChild(dotButton);
+                }
+               
+                    let currbutton = document.createElement("button");// create button
+                    currbutton.setAttribute("onclick","On_Page_ButtonClick(event)");
+                    currbutton.innerText= pages;
+                    if(i===searchPage)
+                    {
+                        currbutton.style.background="yellow";
+                    }
+                    pageNav.appendChild(currbutton);
+            }
+            if(count<countBorder)
+            {
+                count++;
+                if(searchPage>=2&& firstButtonCreated===false)
+                {
+                    let button = document.createElement("button");// create button
+                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                    button.innerText=1;
+                    pageNav.appendChild(button);
+                    if(searchPage!=2)
+                    {
+                        let dotButton = document.createElement("button");// create button
+                        dotButton.innerText="...";
+                        pageNav.appendChild(dotButton);
+                    }
                     firstButtonCreated=true;
                 }
                 if(i<=pageLength&&i<=pages)
@@ -95,11 +135,11 @@ request.onload= function()
                     button.innerText= i;
                     if(i===searchPage)
                     {
-                        button.style.background="yellow";
+                        button.style.background="white";
                     }
                     pageNav.appendChild(button);
                 }   
-                if(count ===10&&i!=pages){
+                if(count ===countBorder&&i!==pages&&i>1){
                     let dotButton = document.createElement("button");// create button
                     dotButton.innerText="...";
                     pageNav.appendChild(dotButton);
@@ -107,12 +147,14 @@ request.onload= function()
                     button.setAttribute("onclick","On_Page_ButtonClick(event)");
                     button.innerText=pages;
                     pageNav.appendChild(button);
-                   
+                    let nextButton = document.createElement("button");
+                    nextButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
+                    nextButton.innerText=">";
+                    pageNav.appendChild(nextButton);
                 }
-
-                
             }
             else{
+
                 i = pageLength;
             }
             

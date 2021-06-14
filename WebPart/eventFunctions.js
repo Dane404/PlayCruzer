@@ -8,16 +8,28 @@ function On_Submit(event)
     if(event.keyCode==13)
     {
         let searchbar = document.getElementById("searchBar");
-        if(searchbar.value!="")
-        {
             let searchString = slugify(searchbar.value);
     
             window.location.replace("./searchSite.html?search="+searchString+"&page=1");
-        }
 
     }
     
 }
+function On_PrevOrNext_Button_Click(event)
+{
+    let urlParams = new URLSearchParams(window.location.search);
+    let searchString = slugify(urlParams.get("search"));
+    if(event.target.innerText==="<")
+    {
+        window.location.replace("./searchSite.html?search="+searchString+"&page="+(parseInt(urlParams.get("page"))-1));
+    }
+    if(event.target.innerText===">")
+    {
+        window.location.replace("./searchSite.html?search="+searchString+"&page="+(parseInt(urlParams.get("page"))+1));
+    }
+
+}
+
 function On_Page_ButtonClick(event)
 {
     console.log(event.target);

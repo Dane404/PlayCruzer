@@ -43,7 +43,14 @@ function ShowGames(){
             image.setAttribute("onclick","On_Click(event)");
             image.alt = response.results[i].id;
             image.setAttribute("class","img-"+(i+1)+" slider-img");
-            image.src=response.results[i].background_image;
+            if(response.results[i].background_image===null)
+            {
+              image.src="assets/img/Logo.png";
+            }
+            else{
+              image.src=response.results[i].background_image;
+            }            
+            
             carouselInner.appendChild(image);
         }
         scrollPerClick = document.querySelector(".img-1").clientWidth + 850;

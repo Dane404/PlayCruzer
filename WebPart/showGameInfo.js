@@ -69,6 +69,15 @@ screenShotRequest.onload=function(){
           }
           var changeTitle = document.getElementById("gameTitle");
           changeTitle.innerText+=  " "+response.name;
+
+          var release = document.createElement("p");
+          release.innerText="Release-Date: "+response.released;
+          document.getElementById("infos").appendChild(release);
+
+          var metacritic = document.createElement("p");
+          metacritic.innerText= "Metacritic-Score: "+response.metacritic;
+          document.getElementById("infos").appendChild(metacritic);
+
           document.getElementById("gameDescription").innerHTML="description: "+response.description;
           var changePlattforms = document.getElementById("gamePlatforms");
           for(let i = 0;i<response.platforms.length;i++)
