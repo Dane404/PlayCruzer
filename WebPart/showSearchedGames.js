@@ -83,7 +83,6 @@ request.onload= function()
         for(let i =searchPage;i<=pageLength;i++)
         {
             if(count==0&&searchPage!=1)
-<<<<<<< HEAD
             {
                 let prevButton = document.createElement("button");
                 prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
@@ -93,40 +92,6 @@ request.onload= function()
             if(count==0&&parseInt(searchPage)===pages)
             {
                 if(i>1)
-=======
-            {
-                let prevButton = document.createElement("button");
-                prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
-                prevButton.innerText="<";
-                pageNav.appendChild(prevButton);
-            }
-            if(count==0&&parseInt(searchPage)===pages)
-            {
-                if(i>1)
-                {
-                    let button = document.createElement("button");// create button
-                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    button.innerText=1;
-                    pageNav.appendChild(button);
-                    let dotButton = document.createElement("button");// create button
-                    dotButton.innerText="...";
-                    pageNav.appendChild(dotButton);
-                }
-               
-                    let currbutton = document.createElement("button");// create button
-                    currbutton.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    currbutton.innerText= pages;
-                    if(i===searchPage)
-                    {
-                        currbutton.style.background="yellow";
-                    }
-                    pageNav.appendChild(currbutton);
-            }
-            if(count<countBorder)
-            {
-                count++;
-                if(parseInt(searchPage)>=2&& firstButtonCreated===false)
->>>>>>> 67ebe7b9cbe97a1d334fe31adca882b8fb58ac05
                 {
                     let button = document.createElement("button");// create button
                     button.setAttribute("onclick","On_Page_ButtonClick(event)");
