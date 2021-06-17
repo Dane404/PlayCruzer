@@ -140,9 +140,13 @@ request.onload= function()
                     pageNav.appendChild(button);
                 }   
                 if(count ===countBorder&&i!==pages&&i>1){
-                    let dotButton = document.createElement("button");// create button
-                    dotButton.innerText="...";
-                    pageNav.appendChild(dotButton);
+                    if(count==10)
+                    {
+                        let dotButton = document.createElement("button");// create button
+                        dotButton.innerText="...";
+                        pageNav.appendChild(dotButton);
+                    
+                    }
                     let button = document.createElement("button");// create button
                     button.setAttribute("onclick","On_Page_ButtonClick(event)");
                     button.innerText=pages;

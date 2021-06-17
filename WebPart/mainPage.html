@@ -26,8 +26,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#recommendations">Recommendations</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="../StaticPart/Pages/Steam.html">Static Part</a></li>
 
@@ -51,15 +49,14 @@
     <!-- recommendations section-->
     <section class="page-section game">
         <div class="container">
-            <h2 class="page-section-heading  text-uppercase text-secondary mb-0">Top Rated Games</h2>
+            <h2 class="page-section-heading  text-uppercase text-secondary mb-0">Random Games<button style="text-align: right;" onclick="GenerateRandomGames()">generate new</button></h2>
             <div id="topRatedGames" class="row justify-content-center">
 
                 <div id="myCarouselRated" class="carouselRated">
                     <div id="carouselInnerRated" class="carouselbox">
-                        <!-- Random Data will come here  -->
+                        <!-- Random Games will come here  -->
                     </div>
                     <!-- Left and right controls -->
-
                     <a class="switchLeft sliderButton" onclick="sliderScrollLeft()"><</a>
                     <a class="switchRight sliderButton" onclick="sliderScrollRight()">></a>
                 </div>
@@ -112,7 +109,6 @@
     <!---->
     <script src="js/scripts.js"></script>
     <script src="eventFunctions.js"></script>
-    <script src="searchbar.js"></script>
     <script src="slideShowMain.js"></script>
 </body>
 </html>
