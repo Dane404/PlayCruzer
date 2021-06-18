@@ -6,10 +6,11 @@ const request = new XMLHttpRequest();
 request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&search_precise=true&page_size=40&search="+searchValue+"&page="+searchPage,true);
 request.onload= function()
 {
-     var response =JSON.parse(request.responseText);
-     console.log(response.count);
-     if(response!=null)
+     
+     if(request.status!==404)
      {
+        var response =JSON.parse(request.responseText);
+
         //create games to be shown
         for(let i = 0;i<response.results.length;i++)
         {
@@ -161,10 +162,13 @@ request.onload= function()
 
                 i = pageLength;
             }
-            
-           
-            
         }
+     }
+     else{
+        let notFound = document.createElement("h1");
+        notFound.innerText="NO GAMES FOUND!";
+        notFound.setAttribute("class","notFound");
+        document.getElementById("foundGames").appendChild(notFound);
      }
 
 }

@@ -10,8 +10,29 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+/* Container holding the image and the text */
+.image-container
+{
+  position: relative;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: white;
+}
+.notFound
+{
+  text-align:center;
+  margin: 25%;
+}
+.centered {
+  
  
+  font-size: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
+  transform: translate(-50%, -50%);
+}
  button, input[type="button"] {
   background-color: var(--primary); /* Green */
   border: none;
@@ -25,10 +46,7 @@
   border-radius: 25px;
 }
 
-.centerer{
-  position: relative;
-  left:400px;
-}
+
 
 .carouselRated {
   height: 250px;
@@ -40,14 +58,13 @@
   color: white;
   font-weight: bold;
   height: 100%;
-  width: 40%;
+  width: 20%;
   line-height: 250px;
   font-size: 50px;
   text-align: center;
   background-color:transparent;
   font-family: sans-serif;
   top: 0;
-
   color: black;
   z-index: 3;
 }
