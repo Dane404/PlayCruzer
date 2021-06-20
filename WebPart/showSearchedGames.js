@@ -63,106 +63,110 @@ request.onload= function()
             formatGameItem.appendChild(gameItem);
             document.getElementById("foundGames").appendChild(formatGameItem);
         }
-
+        
         //page nav buttons
         let countBorder = 10;
         let pages=  Math.ceil(response.count/40);
-        let pageNav = document.getElementById("pageNav");
-        let firstButtonCreated= false;
-        let shouldContinue=true;
-        let pageLength=pages;
-        if(searchPage+10<=pages)
+        if(pages>1)
         {
-            pageLength=searchPage+10;
-        }
-        let count = 0;
-        console.log(pages);
-        if((parseInt(searchPage)+countBorder)>=pages)
-        {
-            countBorder=10-((parseInt(searchPage)+10-pages));
-        }
-        for(let i =searchPage;i<=pageLength;i++)
-        {
-            if(count==0&&searchPage!=1)
+            let pageNav = document.getElementById("pageNav");
+            let firstButtonCreated= false;
+            let shouldContinue=true;
+            let pageLength=pages;
+            if(searchPage+10<=pages)
             {
-                let prevButton = document.createElement("button");
-                prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
-                prevButton.innerText="<";
-                pageNav.appendChild(prevButton);
+                pageLength=searchPage+10;
             }
-            if(count==0&&parseInt(searchPage)===pages)
+            let count = 0;
+            console.log(pages);
+            if((parseInt(searchPage)+countBorder)>=pages)
             {
-                if(i>1)
+                countBorder=10-((parseInt(searchPage)+10-pages));
+            }
+            for(let i =searchPage;i<=pageLength;i++)
+            {
+                if(count==0&&searchPage!=1)
                 {
-                    let button = document.createElement("button");// create button
-                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    button.innerText=1;
-                    pageNav.appendChild(button);
-                    let dotButton = document.createElement("button");// create button
-                    dotButton.innerText="...";
-                    pageNav.appendChild(dotButton);
+                    let prevButton = document.createElement("button");
+                    prevButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
+                    prevButton.innerText="<";
+                    pageNav.appendChild(prevButton);
                 }
-               
-                    let currbutton = document.createElement("button");// create button
-                    currbutton.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    currbutton.innerText= pages;
-                    if(i===searchPage)
-                    {
-                        currbutton.style.background="yellow";
-                    }
-                    pageNav.appendChild(currbutton);
-            }
-            if(count<countBorder)
-            {
-                count++;
-                if(searchPage>=2&& firstButtonCreated===false)
+                if(count==0&&parseInt(searchPage)===pages)
                 {
-                    let button = document.createElement("button");// create button
-                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    button.innerText=1;
-                    pageNav.appendChild(button);
-                    if(searchPage!=2)
+                    if(i>1)
                     {
+                        let button = document.createElement("button");// create button
+                        button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                        button.innerText=1;
+                        pageNav.appendChild(button);
                         let dotButton = document.createElement("button");// create button
                         dotButton.innerText="...";
                         pageNav.appendChild(dotButton);
                     }
-                    firstButtonCreated=true;
+                
+                        let currbutton = document.createElement("button");// create button
+                        currbutton.setAttribute("onclick","On_Page_ButtonClick(event)");
+                        currbutton.innerText= pages;
+                        if(i===searchPage)
+                        {
+                            currbutton.style.background="white";
+                        }
+                        pageNav.appendChild(currbutton);
                 }
-                if(i<=pageLength&&i<=pages)
+                if(count<countBorder)
                 {
-                    let button = document.createElement("button");// create button
-                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    button.innerText= i;
-                    if(i===searchPage)
+                    count++;
+                    if(searchPage>=2&& firstButtonCreated===false)
                     {
-                        button.style.background="white";
+                        let button = document.createElement("button");// create button
+                        button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                        button.innerText=1;
+                        pageNav.appendChild(button);
+                        if(searchPage!=2)
+                        {
+                            let dotButton = document.createElement("button");// create button
+                            dotButton.innerText="...";
+                            pageNav.appendChild(dotButton);
+                        }
+                        firstButtonCreated=true;
                     }
-                    pageNav.appendChild(button);
-                }   
-                if(count ===countBorder&&i!==pages&&i>1){
-                    if(count==10)
+                    if(i<=pageLength&&i<=pages)
                     {
-                        let dotButton = document.createElement("button");// create button
-                        dotButton.innerText="...";
-                        pageNav.appendChild(dotButton);
-                    
+                        let button = document.createElement("button");// create button
+                        button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                        button.innerText= i;
+                        if(i===searchPage)
+                        {
+                            button.style.background="white";
+                        }
+                        pageNav.appendChild(button);
+                    }   
+                    if(count ===countBorder&&i!==pages&&i>1){
+                        if(count==10)
+                        {
+                            let dotButton = document.createElement("button");// create button
+                            dotButton.innerText="...";
+                            pageNav.appendChild(dotButton);
+                        
+                        }
+                        let button = document.createElement("button");// create button
+                        button.setAttribute("onclick","On_Page_ButtonClick(event)");
+                        button.innerText=pages;
+                        pageNav.appendChild(button);
+                        let nextButton = document.createElement("button");
+                        nextButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
+                        nextButton.innerText=">";
+                        pageNav.appendChild(nextButton);
                     }
-                    let button = document.createElement("button");// create button
-                    button.setAttribute("onclick","On_Page_ButtonClick(event)");
-                    button.innerText=pages;
-                    pageNav.appendChild(button);
-                    let nextButton = document.createElement("button");
-                    nextButton.setAttribute("onclick","On_PrevOrNext_Button_Click(event)");
-                    nextButton.innerText=">";
-                    pageNav.appendChild(nextButton);
                 }
-            }
-            else{
+                else{
 
-                i = pageLength;
+                    i = pageLength;
+                }
             }
         }
+        
      }
      else{
         let notFound = document.createElement("h1");

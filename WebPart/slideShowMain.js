@@ -92,7 +92,7 @@ function ShowGames()
              image.src=response.background_image;
           
            }
-           
+           textDiv.width=image.width;
            imageDiv.appendChild(image);
            imageDiv.appendChild(textDiv);
           carouselInner.appendChild(imageDiv);

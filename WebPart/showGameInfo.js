@@ -10,48 +10,58 @@ screenShotRequest.onload=function(){
           var screenShotResponse =JSON.parse(screenShotRequest.responseText);
           if(screenShotResponse.results.length!=0||response.background_image!=null)
           {
-               if(screenShotResponse.results.length>1)
+
+               let length = screenShotResponse.results.length;
+               if(screenShotResponse.results.length<1)
                {
-                    let carouselInner = document.getElementById("carouselInner");
-                    for(let i=0;i<screenShotResponse.results.length;i++)
-                    {
-                         
-                         let carouselItem = document.createElement("div");
-                         if(i===0)
-                         {
-                              carouselItem.setAttribute("class","carousel-item active");
-                         }
-                         else{
-                              carouselItem.setAttribute("class","carousel-item");
-                         }
-                         
-                         let image = document.createElement("img");
-                         image.setAttribute("class","d-block w-100");
-                         image.src=screenShotResponse.results[i].image;
-                         carouselItem.appendChild(image);
-                         carouselInner.appendChild(carouselItem);
-                    }
-                    let currentButton = "prev";
-                    for(let i = 0;i<=1;i++)
-                    {
-                         let button = document.createElement("a");
-                         button.setAttribute("class","carousel-control-"+currentButton);
-                         button.setAttribute("role","button");
-                         button.setAttribute("data-slide",currentButton);
-                         button.href = "#myCarousel";
-                         let span1 = document.createElement("span");
-                         span1.setAttribute("class","carousel-control-"+currentButton+"-icon");
-                         span1.setAttribute("aria-hidden","true");
-                         let span2 = document.createElement("span");
-                         span2.setAttribute("class","sr-only");
-                         span2.innerText=currentButton;
-                         button.appendChild(span1);
-                         button.appendChild(span2);
-                         currentButton="next";
-                         document.getElementById("myCarousel").appendChild(button);
-                    }
+                    length=1
                }
-               else if(screenShotResponse.results.length===1){
+               let carouselInner = document.getElementById("carouselInner");
+               for(let i=0;i<length;i++)
+               {
+                    
+                    let carouselItem = document.createElement("div");
+                    if(i===0)
+                    {
+                         carouselItem.setAttribute("class","carousel-item active");
+                    }
+                    else{
+                         carouselItem.setAttribute("class","carousel-item");
+                    }
+                    
+                    let image = document.createElement("img");
+                    image.setAttribute("style","width:50rem;height:30rem;object-fit:contain");
+                    if(screenShotResponse.results.length<1)
+                    {
+                         image.src=response.background_image;
+                    }    
+                    else{
+                         image.src=screenShotResponse.results[i].image;
+                    }
+                    carouselItem.appendChild(image);
+                    carouselInner.appendChild(carouselItem);
+               }
+               let currentButton = "prev";
+               for(let i = 0;i<=1;i++)
+               {
+                    let button = document.createElement("a");
+                    button.setAttribute("class","carousel-control-"+currentButton);
+                    button.setAttribute("role","button");
+                    button.setAttribute("data-slide",currentButton);
+                    button.href = "#myCarousel";
+                    let span1 = document.createElement("span");
+                    span1.setAttribute("class","carousel-control-"+currentButton+"-icon");
+                    span1.setAttribute("aria-hidden","true");
+                    let span2 = document.createElement("span");
+                    span2.setAttribute("class","sr-only");
+                    span2.innerText=currentButton;
+                    button.appendChild(span1);
+                    button.appendChild(span2);
+                    currentButton="next";
+                    document.getElementById("myCarousel").appendChild(button);
+               }
+               
+               if(screenShotResponse.results.length===1){
                     let image = document.createElement("image");
                     image.src= screenShotResponse.results[0].image;
                     image.setAttribute("class","d-block w-100");
@@ -63,7 +73,6 @@ screenShotRequest.onload=function(){
                     image.setAttribute("class","d-block w-100");
                     document.getElementById("carouselInner").appendChild(image);
                }
-               
 
 
           }
@@ -73,11 +82,13 @@ screenShotRequest.onload=function(){
           var release = document.createElement("p");
           release.innerText="Release-Date: "+response.released;
           document.getElementById("infos").appendChild(release);
-
-          var metacritic = document.createElement("p");
-          metacritic.innerText= "Metacritic-Score: "+response.metacritic;
-          document.getElementById("infos").appendChild(metacritic);
-
+          if(response.metacritic!=null)
+          {
+               var metacritic = document.createElement("p");
+               metacritic.innerText= "Metacritic-Score: "+response.metacritic;
+               document.getElementById("infos").appendChild(metacritic);     
+          }
+         
           document.getElementById("gameDescription").innerHTML="description: "+response.description;
           var changePlattforms = document.getElementById("gamePlatforms");
           for(let i = 0;i<response.platforms.length;i++)
