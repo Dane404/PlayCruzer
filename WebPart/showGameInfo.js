@@ -1,8 +1,8 @@
 let searchedId= GetIdFromURL(); 
 const screenShotRequest =new XMLHttpRequest();
-screenShotRequest.open("GET","https://api.rawg.io/api/games/"+searchedId+"/screenshots?key=d6cc5ff8a62b4b5ea8443d792d63ccf8",true);
+screenShotRequest.open("GET","https://api.rawg.io/api/games/"+searchedId+"/screenshots?key=YOUR_KEY",true);
 const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games/"+searchedId+"?key=d6cc5ff8a62b4b5ea8443d792d63ccf8",true);
+request.open("GET","https://api.rawg.io/api/games/"+searchedId+"?key=YOUR_KEY",true);
 screenShotRequest.onload=function(){
      request.onload= function()
      {
