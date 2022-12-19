@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(query);
 let searchValue = urlParams.get("search");
 let searchPage = urlParams.get("page");
 const request = new XMLHttpRequest();
-request.open("GET","https://api.rawg.io/api/games?key=d6cc5ff8a62b4b5ea8443d792d63ccf8&search_precise=true&page_size=40&search="+searchValue+"&page="+searchPage,true);
+request.open("GET","https://api.rawg.io/api/games?key=YOURE_KEY&search_precise=true&page_size=40&search="+searchValue+"&page="+searchPage,true);
 request.onload= function()
 {
      
